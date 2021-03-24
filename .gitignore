@@ -1,0 +1,8 @@
+node_modules
+*.log
+.DS_Store
+.cache
+dist
+.nocommit
+docker-utils.md
+coverage
