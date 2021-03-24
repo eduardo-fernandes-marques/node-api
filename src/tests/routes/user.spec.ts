@@ -1,5 +1,5 @@
 import request from "supertest";
-import { Request, Response, NextFunction } from "express";
+import { Request, Response, NextFunction, response } from "express";
 
 import app from "#/app";
 import fixtures from "#/config/server/fixtures.json";
@@ -7,16 +7,12 @@ import { getUri, ERROR_MESSAGES } from "#/config/constants";
 
 let authorization = true;
 
-jest.mock("@sicredi/express-security", () => ({
-  ...(jest.requireActual("@sicredi/express-security") as {}),
-  authenticate: jest.fn(() => (_: Request, __: Response, next: NextFunction) => {
-    return next();
-  }),
-  hasAnyRole: jest.fn(
-    () => (_: Request, response: Response, next: NextFunction) => {
-      if (authorization) return next();
-
-      response.sendStatus(403);
+jest.mock("authenticate", () => ({
+  ...(jest.requireActual("authenticate") as {}),
+  authenticate: jest.fn(
+    () => (_: Request, __: Response, next: NextFunction) => {
+      if (!authorization) return response.status(403).end();
+      return next();
     }
   ),
 }));
@@ -50,9 +46,7 @@ describe("routes › user", () => {
     });
 
     it("users/:userId › should handle", async () => {
-      const result = await request(app())
-        .get(getUri("users/123"))
-        .send();
+      const result = await request(app()).get(getUri("users/123")).send();
 
       expect(result.status).toBe(200);
       expect(result.body).toStrictEqual({ user: { ...fixtures.user } });
@@ -72,9 +66,7 @@ describe("routes › user", () => {
     });
 
     it("users/:userId › should handle schema error", async () => {
-      const result = await request(app())
-        .get(getUri("users/1"))
-        .send();
+      const result = await request(app()).get(getUri("users/1")).send();
 
       expect(result.status).toBe(422);
       expect(result.body).toStrictEqual({

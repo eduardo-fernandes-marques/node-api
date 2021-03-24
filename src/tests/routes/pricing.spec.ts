@@ -16,8 +16,8 @@ import {
   getAverageMinimumCostEndpoint,
 } from "#/routes/pricing.router";
 
-jest.mock("@sicredi/express-security", () => ({
-  ...(jest.requireActual("@sicredi/express-security") as {}),
+jest.mock("authenticate", () => ({
+  ...(jest.requireActual("authenticate") as {}),
   authenticate: jest.fn(
     () => (_: Request, __: Response, next: NextFunction) => {
       return next();

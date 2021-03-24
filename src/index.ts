@@ -1,8 +1,8 @@
-// import "#/config/swagger";
+import "#/config/swagger";
 import { config } from "#/config/constants";
-// import { init as traceInit } from "#/config/trace";
+import { init as traceInit } from "#/config/trace";
 
-// traceInit({ jaeger: config.jaeger });
+traceInit({ jaeger: config.jaeger });
 
 import app from "#/app";
 

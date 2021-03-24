@@ -4,11 +4,13 @@ import { Request, Response, NextFunction } from "express";
 import app from "#/app";
 import { getUri } from "#/config/constants";
 
-jest.mock("@sicredi/express-security", () => ({
-  ...(jest.requireActual("@sicredi/express-security") as {}),
-  authenticate: jest.fn(() => (_: Request, __: Response, next: NextFunction) => {
-    return next();
-  }),
+jest.mock("authenticate", () => ({
+  ...(jest.requireActual("authenticate") as {}),
+  authenticate: jest.fn(
+    () => (_: Request, __: Response, next: NextFunction) => {
+      return next();
+    }
+  ),
 }));
 
 describe("routes", () => {

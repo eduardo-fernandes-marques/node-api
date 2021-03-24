@@ -1,0 +1,8 @@
+{
+  "url": {
+    "pricing": "http://node-api",
+    "guarantee": "http://node-api",
+    "product": "http://node-api",
+    "organization": "http://node-api"
+  }
+}

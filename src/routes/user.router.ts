@@ -1,7 +1,6 @@
 import { Router, Request, Response } from "express";
-import { hasAnyRole } from "@sicredi/express-security";
 
-import { config, ERROR_MESSAGES } from "#/config/constants";
+import { ERROR_MESSAGES } from "#/config/constants";
 import { getUser, createUser } from "#/controllers/user.controller";
 import { getUserSchema, createUserSchema } from "#/models/schemas/user.schema";
 import {
@@ -33,7 +32,7 @@ router
 
 router
   .route("/role/:userId")
-  .get(hasAnyRole(config.roles), (_: Request, response: Response) => {
+  .get((_: Request, response: Response) => {
     return response.status(200).json({ message: "role" });
   });
 

@@ -1,14 +1,11 @@
-# Credit Pricing BO BFF
+# Initial structure to a node API
 
-Aplicação para realizar o proxy entre a aplicação de [front-end](https://gitlab.sicredi.net/precificacao/credit-pricing-bo-web) com o [back-end](https://gitlab.sicredi.net/precificacao/credit-pricing-bo-web). São feitos tratamentos necessárias para essas duas camadas conversarem.
-
-
-## Comandos
-- `npm run dev` Sobe a aplicação local e fica atualizando a mesma conforme percebe alterações nos arquivos.
-- `npm run lint` Analisa padrões de escrita do código.
-- `npm run test` Roda os testes. É gerado o coverage (interface de cobertura) através desse comando também.
-- `npm run build` Gera o bundle da aplicação. Realiza conversões para javascript puro.
-- `npm run start` Roda a aplicação em produção. Realiza o build da aplicação e roda em node.
-- `npm run setup` Realiza a configuração inicial da aplicação. Limpa a aplicação configura tudo novamente.
-- `npm run review` Faz a analise dos padrões de código e gera o bundle.
-- `npm run clean` Remove dependências e builds.
+## Commands
+- `npm run dev` Goes up the local application and keeps updating it as it perceives changes in the files.
+- `npm run lint` Analyzes code writing patterns.
+- `npm run test` Run the tests. Coverage (coverage interface) is generated through this command as well.
+- `npm run build` Generates the application bundle. Performs conversions to pure javascript.
+- `npm run start` Run the application in production. Builds the application and runs on node.
+- `npm run setup` Performs the initial configuration of the application. Cleans the application configures everything again.
+- `npm run review` Analyzes code patterns and generates the bundle.
+- `npm run clean` Removes dependencies and builds.

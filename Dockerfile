@@ -1,9 +1,9 @@
 # Builder image
-FROM registry.sicredi.in/services-nodejs:13x
+FROM registry/services-nodejs:13x
 
 # Image metadata
-LABEL description     = "Provide a docker image to Demo Node BFF."
-LABEL path            = "registry.sicredi.in/credit-pricing-bo-bff:13x"
+LABEL description     = "Provide a docker image to Demo Node API."
+LABEL path            = "registry/node-api:13x"
 LABEL version         = "$VERSION"
 
 # Build arguments

@@ -11,8 +11,8 @@ import { getUri, APPLICATION } from "#/config/constants";
 import { Entity } from "#/models/services/organization.model";
 import { path, getEntityEndpoint } from "#/routes/organization.router";
 
-jest.mock("@sicredi/express-security", () => ({
-  ...(jest.requireActual("@sicredi/express-security") as {}),
+jest.mock("authenticate", () => ({
+  ...(jest.requireActual("authenticate") as {}),
   authenticate: jest.fn(
     () => (_: Request, __: Response, next: NextFunction) => {
       return next();

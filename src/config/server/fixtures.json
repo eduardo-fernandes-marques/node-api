@@ -1,433 +1,135 @@
 {
   "service": {
     "guarantee": {
-      "types": [{
-          "key": "GUARANTOR",
-          "description": "Avalista"
-        },
+      "types": [
         {
-          "key": "VEHICLE",
-          "description": "Veículo"
-        },
-        {
-          "key": "REAL_ESTATE",
-          "description": "Imóvel"
-        },
-        {
-          "key": "MOCK",
-          "description": "mock"
+          "key": "KEY",
+          "description": "description"
         }
       ]
     },
     "pricing": {
       "insert": {
-        "idPricing": "5fc796a3d70a3b204b083a18"
+        "idPricing": "idPricing"
       },
       "update": {
-        "idPricing": "5fc796a3d70a3b204b083a18"
+        "idPricing": "idPricing"
       },
       "get": {
-        "id": "5fc796a3d70a3b204b083a18",
-        "productCode": "5ecfbe845f1503000139e349",
-        "organization": "0119",
-        "startDate": "2020-12-02",
-        "fixedMinimumCost": 1,
-        "suggestedSpread": 1,
-        "riskBands": [{
-            "name": "Baixíssimo",
-            "prop": "VERY_LOW",
-            "fixedMinimumCost": 1.0,
-            "averageMinimumCost": 0.603,
-            "averageRiskCost": 0.39,
-            "averageFundingCost": 0.159,
-            "averageOperationalCost": 0.054,
-            "spread": 1.0
-          },
+        "id": "id",
+        "productCode": "productCode",
+        "organization": "organization",
+        "startDate": "0-0-0",
+        "fixedMinimumCost": 0,
+        "suggestedSpread": 0,
+        "riskBands": [
           {
-            "name": "Baixo 1",
-            "prop": "LOW_1",
-            "fixedMinimumCost": 1.0,
-            "averageMinimumCost": 0.603,
-            "averageRiskCost": 0.39,
-            "averageFundingCost": 0.159,
-            "averageOperationalCost": 0.054,
-            "spread": 1.0
-          },
-          {
-            "name": "Baixo 2",
-            "prop": "LOW_2",
-            "fixedMinimumCost": 1.0,
-            "averageMinimumCost": 0.612,
-            "averageRiskCost": 0.39,
-            "averageFundingCost": 0.168,
-            "averageOperationalCost": 0.054,
-            "spread": 1.0
-          },
-          {
-            "name": "Médio 1",
-            "prop": "AVERAGE_1",
-            "fixedMinimumCost": 1.0,
-            "averageMinimumCost": 0.677,
-            "averageRiskCost": 0.39,
-            "averageFundingCost": 0.233,
-            "averageOperationalCost": 0.054,
-            "spread": 1.0
-          },
-          {
-            "name": "Médio 2",
-            "prop": "AVERAGE_2",
-            "fixedMinimumCost": 1.0,
-            "averageMinimumCost": 0.795,
-            "averageRiskCost": 0.39,
-            "averageFundingCost": 0.351,
-            "averageOperationalCost": 0.054,
-            "spread": 1.0
-          },
-          {
-            "name": "Alto 1",
-            "prop": "HIGH_1",
-            "fixedMinimumCost": 1.0,
-            "averageMinimumCost": 0.846,
-            "averageRiskCost": 0.39,
-            "averageFundingCost": 0.402,
-            "averageOperationalCost": 0.054,
-            "spread": 1.0
-          },
-          {
-            "name": "Alto 2",
-            "prop": "HIGH_2",
-            "fixedMinimumCost": 1.0,
-            "averageMinimumCost": 0.87,
-            "averageRiskCost": 0.39,
-            "averageFundingCost": 0.426,
-            "averageOperationalCost": 0.054,
-            "spread": 1.0
-          },
-          {
-            "name": "Altíssimo",
-            "prop": "VERY_HIGH",
-            "fixedMinimumCost": 1.0,
-            "averageMinimumCost": 1.069,
-            "averageRiskCost": 0.39,
-            "averageFundingCost": 0.625,
-            "averageOperationalCost": 0.054,
-            "spread": 1.0
-          },
-          {
-            "name": "Default",
-            "prop": "DEFAULT_RISK",
-            "fixedMinimumCost": 1.0,
-            "averageMinimumCost": 1.069,
-            "averageRiskCost": 0.39,
-            "averageFundingCost": 0.625,
-            "averageOperationalCost": 0.054,
-            "spread": 1.0
+            "name": "name",
+            "prop": "prop",
+            "fixedMinimumCost": 0.0,
+            "averageMinimumCost": 0.0,
+            "averageRiskCost": 0.0,
+            "averageFundingCost": 0.0,
+            "averageOperationalCost": 0.0,
+            "spread": 0.0
           }
         ],
-        "postRateDiscount": null,
-        "reciprocities": [{
-            "code": "019",
-            "name": "Patrimônio vs Endividamento total",
-            "weight": 25,
-            "bands": [{
+        "postRateDiscount": "postRateDiscount",
+        "reciprocities": [
+          {
+            "code": "code",
+            "name": "name",
+            "weight": 0,
+            "bands": [
+              {
                 "init": 0,
                 "end": 0,
-                "value": 50,
-                "code": null
-              },
-              {
-                "init": 45,
-                "end": 45,
-                "value": 100,
-                "code": null
-              },
-              {
-                "init": 133,
-                "end": 133,
-                "value": 40,
-                "code": null
-              },
-              {
-                "init": 1004,
-                "end": null,
-                "value": 200,
-                "code": null
+                "value": 0,
+                "code": 0
               }
             ]
-          },
-          {
-            "code": "004",
-            "name": "Valor da operação",
-            "weight": 75,
-            "bands": [{
-              "init": 200,
-              "end": null,
-              "value": 30,
-              "code": null
-            }]
           }
         ],
-        "loggedUser": "henrique_canal",
-        "createdDate": "2020-12-02",
-        "lastModifiedDate": "2020-12-02"
+        "loggedUser": "loggedUser",
+        "createdDate": "0-0-0",
+        "lastModifiedDate": "0-0-0"
       },
-      "averageMinimumCost": [{
-          "name": "Baixíssimo",
-          "prop": "VERY_LOW",
-          "fixedMinimumCost": null,
-          "averageMinimumCost": 0.59,
-          "averageRiskCost": 0.459,
-          "averageFundingCost": 0.092,
-          "averageOperationalCost": 0.039,
-          "spread": null
-        },
+      "averageMinimumCost": [
         {
-          "name": "Baixo 1",
-          "prop": "LOW_1",
-          "fixedMinimumCost": null,
-          "averageMinimumCost": 0.59,
-          "averageRiskCost": 0.459,
-          "averageFundingCost": 0.092,
-          "averageOperationalCost": 0.039,
-          "spread": null
-        },
-        {
-          "name": "Baixo 2",
-          "prop": "LOW_2",
-          "fixedMinimumCost": null,
-          "averageMinimumCost": 0.591,
-          "averageRiskCost": 0.459,
-          "averageFundingCost": 0.093,
-          "averageOperationalCost": 0.039,
-          "spread": null
-        },
-        {
-          "name": "Médio 1",
-          "prop": "AVERAGE_1",
-          "fixedMinimumCost": null,
-          "averageMinimumCost": 0.624,
-          "averageRiskCost": 0.459,
-          "averageFundingCost": 0.126,
-          "averageOperationalCost": 0.039,
-          "spread": null
-        },
-        {
-          "name": "Médio 2",
-          "prop": "AVERAGE_2",
-          "fixedMinimumCost": null,
-          "averageMinimumCost": 0.715,
-          "averageRiskCost": 0.459,
-          "averageFundingCost": 0.217,
-          "averageOperationalCost": 0.039,
-          "spread": null
-        },
-        {
-          "name": "Alto 1",
-          "prop": "HIGH_1",
-          "fixedMinimumCost": null,
-          "averageMinimumCost": 0.743,
-          "averageRiskCost": 0.459,
-          "averageFundingCost": 0.245,
-          "averageOperationalCost": 0.039,
-          "spread": null
-        },
-        {
-          "name": "Alto 2",
-          "prop": "HIGH_2",
-          "fixedMinimumCost": null,
-          "averageMinimumCost": 0.811,
-          "averageRiskCost": 0.459,
-          "averageFundingCost": 0.313,
-          "averageOperationalCost": 0.039,
-          "spread": null
-        },
-        {
-          "name": "Altíssimo",
-          "prop": "VERY_HIGH",
-          "fixedMinimumCost": null,
-          "averageMinimumCost": 0.819,
-          "averageRiskCost": 0.459,
-          "averageFundingCost": 0.321,
-          "averageOperationalCost": 0.039,
-          "spread": null
-        },
-        {
-          "name": "Default",
-          "prop": "DEFAULT_RISK",
-          "fixedMinimumCost": null,
-          "averageMinimumCost": 1.782,
-          "averageRiskCost": 0.459,
-          "averageFundingCost": 1.284,
-          "averageOperationalCost": 0.039,
-          "spread": null
+          "name": "name",
+          "prop": "prop",
+          "fixedMinimumCost": 0,
+          "averageMinimumCost": 0.0,
+          "averageRiskCost": 0.0,
+          "averageFundingCost": 0.0,
+          "averageOperationalCost": 0.0,
+          "spread": 0
         }
       ],
       "productPricing": {
-        "productName": "Credito fácil até 150 mil",
-        "productCode": "1.1",
-        "productCoreId": 200,
-        "productStartDate": "2019-07-22",
-        "productEndDate": "2099-06-24",
-        "productHierarchy": "COOP",
-        "productBaseOn": "5da76c55cff47e000151cdf0",
-        "pricings": [{
-          "id": "5fc796a3d70a3b204b083a18",
-          "productCode": "5ecfbe845f1503000139e349",
-          "organization": "0119",
-          "startDate": "2020-12-02",
-          "fixedMinimumCost": 1,
-          "suggestedSpread": 1,
-          "riskBands": [{
-              "name": "Baixíssimo",
-              "prop": "VERY_LOW",
-              "fixedMinimumCost": 1.0,
-              "averageMinimumCost": 0.603,
-              "averageRiskCost": 0.39,
-              "averageFundingCost": 0.159,
-              "averageOperationalCost": 0.054,
-              "spread": 1.0
-            },
-            {
-              "name": "Baixo 1",
-              "prop": "LOW_1",
-              "fixedMinimumCost": 1.0,
-              "averageMinimumCost": 0.603,
-              "averageRiskCost": 0.39,
-              "averageFundingCost": 0.159,
-              "averageOperationalCost": 0.054,
-              "spread": 1.0
-            },
-            {
-              "name": "Baixo 2",
-              "prop": "LOW_2",
-              "fixedMinimumCost": 1.0,
-              "averageMinimumCost": 0.612,
-              "averageRiskCost": 0.39,
-              "averageFundingCost": 0.168,
-              "averageOperationalCost": 0.054,
-              "spread": 1.0
-            },
-            {
-              "name": "Médio 1",
-              "prop": "AVERAGE_1",
-              "fixedMinimumCost": 1.0,
-              "averageMinimumCost": 0.677,
-              "averageRiskCost": 0.39,
-              "averageFundingCost": 0.233,
-              "averageOperationalCost": 0.054,
-              "spread": 1.0
-            },
-            {
-              "name": "Médio 2",
-              "prop": "AVERAGE_2",
-              "fixedMinimumCost": 1.0,
-              "averageMinimumCost": 0.795,
-              "averageRiskCost": 0.39,
-              "averageFundingCost": 0.351,
-              "averageOperationalCost": 0.054,
-              "spread": 1.0
-            },
-            {
-              "name": "Alto 1",
-              "prop": "HIGH_1",
-              "fixedMinimumCost": 1.0,
-              "averageMinimumCost": 0.846,
-              "averageRiskCost": 0.39,
-              "averageFundingCost": 0.402,
-              "averageOperationalCost": 0.054,
-              "spread": 1.0
-            },
-            {
-              "name": "Alto 2",
-              "prop": "HIGH_2",
-              "fixedMinimumCost": 1.0,
-              "averageMinimumCost": 0.87,
-              "averageRiskCost": 0.39,
-              "averageFundingCost": 0.426,
-              "averageOperationalCost": 0.054,
-              "spread": 1.0
-            },
-            {
-              "name": "Altíssimo",
-              "prop": "VERY_HIGH",
-              "fixedMinimumCost": 1.0,
-              "averageMinimumCost": 1.069,
-              "averageRiskCost": 0.39,
-              "averageFundingCost": 0.625,
-              "averageOperationalCost": 0.054,
-              "spread": 1.0
-            },
-            {
-              "name": "Default",
-              "prop": "DEFAULT_RISK",
-              "fixedMinimumCost": 1.0,
-              "averageMinimumCost": 1.069,
-              "averageRiskCost": 0.39,
-              "averageFundingCost": 0.625,
-              "averageOperationalCost": 0.054,
-              "spread": 1.0
-            }
-          ],
-          "postRateDiscount": null,
-          "reciprocities": [{
-              "code": "019",
-              "name": "Patrimônio vs Endividamento total",
-              "weight": 25,
-              "bands": [{
-                  "init": 0,
-                  "end": 0,
-                  "value": 50,
-                  "code": null
-                },
-                {
-                  "init": 45,
-                  "end": 45,
-                  "value": 100,
-                  "code": null
-                },
-                {
-                  "init": 133,
-                  "end": 133,
-                  "value": 40,
-                  "code": null
-                },
-                {
-                  "init": 1004,
-                  "end": null,
-                  "value": 200,
-                  "code": null
-                }
-              ]
-            },
-            {
-              "code": "004",
-              "name": "Valor da operação",
-              "weight": 75,
-              "bands": [{
-                "init": 200,
-                "end": null,
-                "value": 30,
-                "code": null
-              }]
-            }
-          ],
-          "loggedUser": "henrique_canal",
-          "createdDate": "2020-12-02",
-          "lastModifiedDate": "2020-12-02"
-        }]
+        "productName": "productName",
+        "productCode": "0.0",
+        "productCoreId": 0,
+        "productStartDate": "0-0-0",
+        "productEndDate": "0-0-0",
+        "productHierarchy": "productHierarchy",
+        "productBaseOn": "productBaseOn",
+        "pricings": [
+          {
+            "id": "id",
+            "productCode": "productCode",
+            "organization": "organization",
+            "startDate": "0-0-0",
+            "fixedMinimumCost": 0,
+            "suggestedSpread": 0,
+            "riskBands": [
+              {
+                "name": "name",
+                "prop": "prop",
+                "fixedMinimumCost": 0.0,
+                "averageMinimumCost": 0.0,
+                "averageRiskCost": 0.0,
+                "averageFundingCost": 0.0,
+                "averageOperationalCost": 0.0,
+                "spread": 0.0
+              }
+            ],
+            "postRateDiscount": 0,
+            "reciprocities": [
+              {
+                "code": "code",
+                "name": "name",
+                "weight": 0,
+                "bands": [
+                  {
+                    "init": 0,
+                    "end": 0,
+                    "value": 0,
+                    "code": 0
+                  }
+                ]
+              }
+            ],
+            "loggedUser": "loggedUser",
+            "createdDate": "0-0-0",
+            "lastModifiedDate": "0-0-0"
+          }
+        ]
       },
       "pagination": {
-        "content": [{
-          "id": "5e399f59dc0e820001cf588b",
-          "productCode": "5cfac9c96b2f070001a1826e",
-          "startDate": "2020-02-05",
-          "fixedMinimumCost": 0.01,
-          "suggestedSpread": 0.5,
-          "riskBands": [],
-          "reciprocities": [],
-          "loggedUser": "elizeu_borges",
-          "status": "CURRENT"
-        }],
+        "content": [
+          {
+            "id": "id",
+            "productCode": "productCode",
+            "startDate": "0-0-0",
+            "fixedMinimumCost": 0.0,
+            "suggestedSpread": 0.0,
+            "riskBands": [],
+            "reciprocities": [],
+            "loggedUser": "loggedUser",
+            "status": "STATUS"
+          }
+        ],
         "pageable": {
           "sort": {
             "unsorted": true,
@@ -436,103 +138,105 @@
           },
           "offset": 0,
           "pageNumber": 0,
-          "pageSize": 20,
+          "pageSize": 0,
           "unpaged": false,
           "paged": true
         },
         "last": true,
-        "totalPages": 1,
-        "totalElements": 1,
+        "totalPages": 0,
+        "totalElements": 0,
         "sort": {
           "unsorted": true,
           "sorted": false,
           "empty": true
         },
-        "size": 20,
+        "size": 0,
         "number": 0,
-        "numberOfElements": 1,
+        "numberOfElements": 0,
         "first": true,
         "empty": false
       }
     },
     "product": {
-      "cas": {
-        "id": "5da76c55cff47e000151cdf0",
-        "coreId": 200,
-        "basedOn": "200",
-        "name": "Crédito Pessoal - Price",
-        "code": "1",
-        "status": "ENABLED",
-        "category": "LOAN",
-        "hierarchy": "CAS",
+      "father": {
+        "id": "id",
+        "coreId": 0,
+        "basedOn": "basedOn",
+        "name": "name",
+        "code": "0",
+        "status": "STATUS",
+        "category": "CATEGORY",
+        "hierarchy": "HIERARCHY",
         "value": {
-          "min": 200,
-          "max": 150000
+          "min": 0,
+          "max": 0
         },
         "installment": {
           "quantity": {
-            "min": 1,
-            "max": 48
+            "min": 0,
+            "max": 0
           },
           "value": {
-            "min": 50,
-            "max": 100000
+            "min": 0,
+            "max": 0
           }
         },
         "term": {
-          "min": 1,
-          "max": 99999
+          "min": 0,
+          "max": 0
         },
         "validity": {
-          "beginning": "2019-07-22",
-          "end": "2099-10-01"
+          "beginning": "0-0-0",
+          "end": "0-0-0"
         },
         "gracePeriod": {
-          "min": 1,
-          "max": 60
+          "min": 0,
+          "max": 0
         },
         "financedIOFValue": true,
-        "amortizationMethod": "PRICE_PARCELAS_IGUAIS_FRANCES",
-        "target": "NATURAL_PERSON",
+        "amortizationMethod": "AMORTIZATION_METHOD",
+        "target": "TARGET",
         "bacenModality": {
-          "code": 203,
-          "description": "CRÉDITO PESSOAL - SEM CONSIGNAÇÃO EM FOLHA DE PAGAM."
+          "code": 0,
+          "description": "description"
         },
-        "brands": ["SICREDI"],
-        "documents": [{
-            "id": "5d8299a977490b0001817f21",
+        "brands": ["BRANDS"],
+        "documents": [
+          {
+            "id": "id",
             "required": true
           },
           {
-            "id": "5d829a3e77490b0001817f24",
+            "id": "id",
             "required": true
           }
         ],
-        "contractTemplateId": "5dbc6edf52faff000142ce93",
-        "version": 76,
+        "contractTemplateId": "contractTemplateId",
+        "version": 0,
         "guarantees": {
           "vehicle": {
             "required": true,
-            "maxAge": 10,
-            "fundingPercentages": [{
+            "maxAge": 0,
+            "fundingPercentages": [
+              {
                 "brandNew": false,
                 "range": {
                   "from": 0,
-                  "to": 2
+                  "to": 0
                 },
-                "percentage": 2.44
+                "percentage": 0.0
               },
               {
                 "brandNew": false,
                 "range": {
-                  "from": 6,
-                  "to": 10
+                  "from": 0,
+                  "to": 0
                 },
-                "percentage": 80
+                "percentage": 0
               },
               {
                 "brandNew": true,
-                "percentage": 98
+                "percentage": 0
               }
             ]
           },
@@ -540,87 +244,89 @@
             "required": true
           }
         },
-        "creditOpeningRate": 20,
-        "releaseType": "AUTOMATIC"
+        "creditOpeningRate": 0,
+        "releaseType": "RELEASE_TYPE"
       },
-      "byCoop": {
-        "id": "5ecfbe845f1503000139e349",
-        "coreId": 200,
-        "basedOn": "5da76c55cff47e000151cdf0",
-        "coop": 119,
-        "name": "Credito fácil até 150 mil",
-        "code": "1.1",
-        "status": "ENABLED",
-        "category": "LOAN",
-        "hierarchy": "COOP",
+      "child": {
+        "id": "id",
+        "coreId": 0,
+        "basedOn": "basedOn",
+        "coop": 0,
+        "name": "name",
+        "code": "code",
+        "status": "STATUS",
+        "category": "CATEGORY",
+        "hierarchy": "HIERARCHY",
         "value": {
-          "min": 200,
-          "max": 150000
+          "min": 0,
+          "max": 0
         },
         "installment": {
           "quantity": {
-            "min": 1,
-            "max": 48
+            "min": 0,
+            "max": 0
           },
           "value": {
-            "min": 50,
-            "max": 100000
+            "min": 0,
+            "max": 0
           }
         },
         "term": {
-          "min": 2,
-          "max": 99999
+          "min": 0,
+          "max": 0
         },
         "validity": {
-          "beginning": "2019-07-22",
-          "end": "2099-06-24"
+          "beginning": "0-0-0",
+          "end": "0-0-0"
         },
         "gracePeriod": {
-          "min": 2,
-          "max": 60
+          "min": 0,
+          "max": 0
         },
         "financedIOFValue": true,
-        "amortizationMethod": "PRICE_PARCELAS_IGUAIS_FRANCES",
-        "target": "NATURAL_PERSON",
+        "amortizationMethod": "AMORTIZATION_METHOD",
+        "target": "TARGET",
         "bacenModality": {
-          "code": 203,
-          "description": "CRÉDITO PESSOAL - SEM CONSIGNAÇÃO EM FOLHA DE PAGAM."
+          "code": 0,
+          "description": "description"
         },
-        "brands": ["SICREDI"],
-        "documents": [{
-            "id": "5d8299a977490b0001817f21",
+        "brands": ["BRANDS"],
+        "documents": [
+          {
+            "id": "id",
             "required": true
           },
           {
-            "id": "5d829a3e77490b0001817f24",
+            "id": "id",
             "required": true
           }
         ],
-        "contractTemplateId": "5dbc6edf52faff000142ce93",
-        "version": 25,
+        "contractTemplateId": "contractTemplateId",
+        "version": 0,
         "guarantees": {
           "vehicle": {
             "required": true,
-            "maxAge": 10,
-            "fundingPercentages": [{
+            "maxAge": 0,
+            "fundingPercentages": [
+              {
                 "brandNew": false,
                 "range": {
                   "from": 0,
-                  "to": 2
+                  "to": 0
                 },
-                "percentage": 2.44
+                "percentage": 0.0
               },
               {
                 "brandNew": false,
                 "range": {
-                  "from": 6,
-                  "to": 10
+                  "from": 0,
+                  "to": 0
                 },
-                "percentage": 80
+                "percentage": 0
               },
               {
                 "brandNew": true,
-                "percentage": 98
+                "percentage": 0
               }
             ]
           },
@@ -628,52 +334,58 @@
             "required": true
           },
           "realEstate": {
-            "minimumCoveragePercentage": 167,
+            "minimumCoveragePercentage": 0,
             "required": false,
-            "specificDocuments": [{
-                "type": "HOUSE",
-                "documents": [{
-                    "id": "5d829a3077490b0001817f23",
+            "specificDocuments": [
+              {
+                "type": "TYPE",
+                "documents": [
+                  {
+                    "id": "id",
                     "required": true
                   },
                   {
-                    "id": "5d8299a977490b0001817f21",
+                    "id": "id",
                     "required": true
                   }
                 ]
               },
               {
-                "type": "APARTMENT",
-                "documents": [{
-                  "id": "5d829a1c77490b0001817f22",
-                  "required": true
-                }]
+                "type": "TYPE",
+                "documents": [
+                  {
+                    "id": "id",
+                    "required": true
+                  }
+                ]
               }
             ]
           }
         },
-        "creditOpeningRate": 20,
-        "releaseType": "AUTOMATIC"
+        "creditOpeningRate": 0,
+        "releaseType": "RELEASE_TYPE"
       }
     },
     "organization": {
       "entity": {
-        "idEntidade": "010108",
-        "codigoEntidade": "0101",
-        "tipoEntidade": "AGENCIA",
-        "entidadePaiId": "010101",
-        "entidadesFilhas": [{
-          "idEntidade": "01010812",
-          "nomeFantasia": "Point"
-        }]
+        "idEntidade": "idEntidade",
+        "codigoEntidade": "codigoEntidade",
+        "tipoEntidade": "TIPO_ENTITY",
+        "entidadePaiId": "entidadePaiId",
+        "entidadesFilhas": [
+          {
+            "idEntidade": "idEntidade",
+            "nomeFantasia": "nomeFantasia"
+          }
+        ]
       }
     }
   },
   "user": {
-    "userId": "123",
+    "userId": "0",
     "status": "Happy",
-    "name": "Test Sicredi",
-    "phoneNumbers": "(51)99999-999",
-    "email": "teste@sicredi.com.br"
+    "name": "Test",
+    "phoneNumbers": "(0)0-0",
+    "email": "test@test.com.br"
   }
 }

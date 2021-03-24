@@ -23,13 +23,13 @@ import {
 
 import { isProd } from "./constants";
 
-export type JaegerConfig = {
+export type Jaeger = {
   endpoint: string;
   serviceName: string;
 };
 
 export type TraceConfig = {
-  jaeger: JaegerConfig;
+  jaeger: Jaeger;
   config?: ExpressInstrumentationConfig;
 };
 

@@ -1,5 +1,5 @@
 import EcsMeta from "~/ecs-meta.json";
-import applicationDev from "~/properties/application-dev.json";
+import applicationDev from "~/properties/dev.json";
 
 type LogLevel =
   | "silent"
@@ -25,27 +25,22 @@ export const isProd = () => process.env.NODE_ENV === "production";
 
 export const config = {
   apiPath: "api",
+  roles: ["test"],
   swaggerRoute: "/docs",
-  gitLabGroup: "@@APP_NAME@@",
   apiName: EcsMeta.service_name,
-  roles: ["developer", "product_owner"],
+  vaultAuth: process.env.VAULT_AUTH,
+  serverPort: process.env.SERVER_PORT,
+  apiVersion: process.env.MAJOR_VERSION,
+  vaultServer: process.env.VAULT_SERVER,
+  consulServer: process.env.CONSUL_SERVER,
   script: process.env.npm_lifecycle_event,
-  serverPort: process.env.SERVER_PORT || "8080",
-  apiVersion: process.env.MAJOR_VERSION || "v1",
+  consulAclToken: process.env.CONSUL_ACL_TOKEN,
   loggerLevel: process.env.LOGGER_LEVEL || ("debug" as LogLevel),
   unprotectedEndpoints: [new RegExp(/^\/api\/v(.*)\/health$/gi)],
-  vaultServer: process.env.VAULT_SERVER || "vault.dev-sicredi.in",
-  vaultAuth: process.env.VAULT_AUTH || "31f62b77-dd73-6f83-6571-a0d53d1eac26",
-  consulAclToken: process.env.CONSUL_ACL_TOKEN || "ARuzMxhYTrKQdQe5fG5UC4tmcc",
-  consulServer:
-    process.env.CONSUL_SERVER || "http://dev-consul.dev-sicredi.in:8500",
   jaeger: {
-    serviceName:
-      process.env.OTEL_JAEGER_SERVICE_NAME || "credit-pricing-bo-bff-v1",
+    serviceName: process.env.OTEL_JAEGER_SERVICE_NAME || "",
     endpoint: (() => {
-      let url: string | URL =
-        process.env.OTEL_JAEGER_ENDPOINT ||
-        "http://tracing-collector.dev-sicredi.in:14268/";
+      let url: string | URL = process.env.OTEL_JAEGER_ENDPOINT || "http://localhost:3000";
 
       if (!/^https?:\/\//i.test(url)) {
         url = `http://${url}`;

@@ -12,15 +12,14 @@ import { getUri, APPLICATION } from "#/config/constants";
 import { path, getPricingsEndpoint } from "#/routes/pricings.router";
 import { PricingPaginationResponse } from "#/models/services/pricing.model";
 
-jest.mock("@sicredi/express-security", () => ({
-  ...(jest.requireActual("@sicredi/express-security") as {}),
+jest.mock("authenticate", () => ({
+  ...(jest.requireActual("authenticate") as {}),
   authenticate: jest.fn(
     () => (_: Request, __: Response, next: NextFunction) => {
       return next();
     }
   ),
 }));
-
 describe("routes › pricings", () => {
   let { nock, server } = {} as { nock: typeof nockType; server: Server };
 
@@ -45,7 +44,7 @@ describe("routes › pricings", () => {
 
           expect(response.body).toStrictEqual(
             mapPricings(
-              fixtures.service.product.cas,
+              fixtures.service.product.father,
               mapPricing(
                 fixtures.service.pricing.pagination
               ) as PricingPaginationResponse

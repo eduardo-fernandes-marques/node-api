@@ -9,8 +9,8 @@ import { createServer, Server } from "#/config/server";
 import { getUri, APPLICATION } from "#/config/constants";
 import { path, getTypesEndpoint } from "#/routes/guarantee.router";
 
-jest.mock("@sicredi/express-security", () => ({
-  ...(jest.requireActual("@sicredi/express-security") as {}),
+jest.mock("authenticate", () => ({
+  ...(jest.requireActual("authenticate") as {}),
   authenticate: jest.fn(
     () => (_: Request, __: Response, next: NextFunction) => {
       return next();

@@ -9,8 +9,8 @@ import { createServer, Server } from "#/config/server";
 import { getUri, APPLICATION } from "#/config/constants";
 import { path, getEndpoint, getByCoopEndpoint } from "#/routes/product.router";
 
-jest.mock("@sicredi/express-security", () => ({
-  ...(jest.requireActual("@sicredi/express-security") as {}),
+jest.mock("authenticate", () => ({
+  ...(jest.requireActual("authenticate") as {}),
   authenticate: jest.fn(
     () => (_: Request, __: Response, next: NextFunction) => {
       return next();
@@ -36,7 +36,7 @@ describe("routes › product", () => {
         .end((error, response) => {
           if (error) return done(error);
 
-          expect(response.body).toStrictEqual(fixtures.service.product.cas);
+          expect(response.body).toStrictEqual(fixtures.service.product.father);
 
           done();
         });
@@ -70,7 +70,7 @@ describe("routes › product", () => {
         .end((error, response) => {
           if (error) return done(error);
 
-          expect(response.body).toStrictEqual(fixtures.service.product.byCoop);
+          expect(response.body).toStrictEqual(fixtures.service.product.child);
 
           done();
         });

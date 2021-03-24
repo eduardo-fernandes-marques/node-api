@@ -84,12 +84,12 @@ export const createServer = (
   if (applications.includes(APPLICATION.PRODUCT)) {
     server.PRODUCT.get((uri) => uri.includes(productPaths.get)).reply(
       200,
-      fixtures.service.product.cas
+      fixtures.service.product.father
     );
 
     server.PRODUCT.get((uri) => uri.includes(productPaths.getByCoop)).reply(
       200,
-      fixtures.service.product.byCoop
+      fixtures.service.product.child
     );
   }
 

@@ -1,5 +1,5 @@
 {
-  "name": "credit-pricing-bo-bff",
+  "name": "node-api",
   "version": "1.0.0",
   "scripts": {
     "dev": "nodemon",
@@ -18,7 +18,7 @@
   "jest": {
     "verbose": true,
     "preset": "ts-jest",
-    "testEnvironment": "node",
+    "testnvironment": "node",
     "setupFilesAfterEnv": [
       "<rootDir>/test.config.js"
     ],
@@ -73,8 +73,6 @@
     "@opentelemetry/instrumentation-http": "^0.18.0",
     "@opentelemetry/node": "^0.18.0",
     "@opentelemetry/propagator-jaeger": "^0.14.0",
-    "@sicredi/express-security": "0.1.0",
-    "@sicredi/node-logger": "0.1.0",
     "body-parser": "^1.19.0",
     "consul": "^0.37.0",
     "cors": "^2.8.5",
